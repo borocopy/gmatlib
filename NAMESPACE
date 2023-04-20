@@ -3,3 +3,4 @@
 export(integrate_rect)
 export(integrate_simpson)
 importFrom(magrittr,"%>%")
+useDynLib(gmatlib, .registration = TRUE)

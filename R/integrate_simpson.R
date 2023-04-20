@@ -1,4 +1,6 @@
-#' Integrate a function numerically using Simpson's Rule
+#' Simpson's Rule integration
+#'
+#' Integrate a function numerically using Simpson's Rule.
 #'
 #' @param fn A function that takes a number and returns another.
 #' @param left Left boundary of integration.

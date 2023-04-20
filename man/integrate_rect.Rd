@@ -2,7 +2,7 @@
 % Please edit documentation in R/integrate_rect.R
 \name{integrate_rect}
 \alias{integrate_rect}
-\title{Integrate a function numerically using rectangular integration.}
+\title{Rectangular integration}
 \usage{
 integrate_rect(fn, left, right, n)
 }

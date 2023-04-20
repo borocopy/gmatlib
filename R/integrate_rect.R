@@ -1,3 +1,5 @@
+#' Rectangular integration
+#'
 #' Integrate a function numerically using rectangular integration.
 #'
 #' @param fn A function that takes a number and returns another.

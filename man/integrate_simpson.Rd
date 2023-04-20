@@ -2,7 +2,7 @@
 % Please edit documentation in R/integrate_simpson.R
 \name{integrate_simpson}
 \alias{integrate_simpson}
-\title{Integrate a function numerically using Simpson's Rule}
+\title{Simpson's Rule integration}
 \usage{
 integrate_simpson(fn, left, right, n)
 }
@@ -19,7 +19,7 @@ integrate_simpson(fn, left, right, n)
 An approximate value of the definite integral.
 }
 \description{
-Integrate a function numerically using Simpson's Rule
+Integrate a function numerically using Simpson's Rule.
 }
 \examples{
 integrate_rect(sin, 0, 3.14159, 2000)

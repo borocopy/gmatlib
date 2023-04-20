@@ -2,10 +2,16 @@ Package: gmatlib
 Title: A general library for numerical analysis and computations.
 Version: 0.0.0.9000
 Authors@R: 
-    person("Denis", "Borodin", , "borocopy@gmail.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: Provides general tools to find numerical solutions to problems of numerical integration, interpolation and regression.
+    person("Denis", "Borodin", , "borocopy@gmail.com", role = c("aut", "cre"))
+Description: Provides general tools to find numerical solutions to problems of
+    numerical integration, interpolation and regression.
 License: Apache License (>= 2)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
+Imports: 
+    magrittr,
+    purrr
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

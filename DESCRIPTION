@@ -1,5 +1,5 @@
 Package: gmatlib
-Title: A general library for numerical analysis and computations.
+Title: A general library for numerical analysis and computations
 Version: 0.0.0.9000
 Authors@R: 
     person("Denis", "Borodin", , "borocopy@gmail.com", role = c("aut", "cre"))

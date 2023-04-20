@@ -6,16 +6,16 @@
 #include <R_ext/Visibility.h>
 
 // code.cpp
-list linfit(doubles xs, doubles ys);
-extern "C" SEXP _gmatlib_linfit(SEXP xs, SEXP ys) {
+list linfit_(doubles xs, doubles ys);
+extern "C" SEXP _gmatlib_linfit_(SEXP xs, SEXP ys) {
   BEGIN_CPP11
-    return cpp11::as_sexp(linfit(cpp11::as_cpp<cpp11::decay_t<doubles>>(xs), cpp11::as_cpp<cpp11::decay_t<doubles>>(ys)));
+    return cpp11::as_sexp(linfit_(cpp11::as_cpp<cpp11::decay_t<doubles>>(xs), cpp11::as_cpp<cpp11::decay_t<doubles>>(ys)));
   END_CPP11
 }
 
 extern "C" {
 static const R_CallMethodDef CallEntries[] = {
-    {"_gmatlib_linfit", (DL_FUNC) &_gmatlib_linfit, 2},
+    {"_gmatlib_linfit_", (DL_FUNC) &_gmatlib_linfit_, 2},
     {NULL, NULL, 0}
 };
 }

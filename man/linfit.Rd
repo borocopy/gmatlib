@@ -7,12 +7,12 @@
 linfit(xs, ys)
 }
 \arguments{
-\item{xs}{double. Vector of dependent variable values.}
+\item{xs}{double. A vector of dependent variable values.}
 
-\item{ys}{double. Vector of independent variable values.}
+\item{ys}{double. A vector of independent variable values.}
 }
 \value{
-List containing m and k.
+A list containing m and k.
 }
 \description{
 Calculates coeffitients m and k for linear regression y = mx + k

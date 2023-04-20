@@ -2,7 +2,8 @@
 using namespace cpp11;
 namespace writable = cpp11::writable;
 
-[[cpp11::register]] list linfit(doubles xs, doubles ys) {
+[[cpp11::register]] list
+linfit_(doubles xs, doubles ys) {
   double sum_x = 0;
   double sum_y = 0;
   double sum_x2 = 0;

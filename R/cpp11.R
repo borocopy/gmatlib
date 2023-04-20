@@ -3,3 +3,11 @@
 linfit_ <- function(xs, ys) {
   .Call(`_gmatlib_linfit_`, xs, ys)
 }
+
+div_dif_ <- function(xs, ys) {
+  .Call(`_gmatlib_div_dif_`, xs, ys)
+}
+
+newton_basis_ <- function(x, xs) {
+  .Call(`_gmatlib_newton_basis_`, x, xs)
+}

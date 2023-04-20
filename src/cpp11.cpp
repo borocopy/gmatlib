@@ -12,10 +12,26 @@ extern "C" SEXP _gmatlib_linfit_(SEXP xs, SEXP ys) {
     return cpp11::as_sexp(linfit_(cpp11::as_cpp<cpp11::decay_t<doubles>>(xs), cpp11::as_cpp<cpp11::decay_t<doubles>>(ys)));
   END_CPP11
 }
+// code.cpp
+double div_dif_(doubles xs, doubles ys);
+extern "C" SEXP _gmatlib_div_dif_(SEXP xs, SEXP ys) {
+  BEGIN_CPP11
+    return cpp11::as_sexp(div_dif_(cpp11::as_cpp<cpp11::decay_t<doubles>>(xs), cpp11::as_cpp<cpp11::decay_t<doubles>>(ys)));
+  END_CPP11
+}
+// code.cpp
+double newton_basis_(double x, doubles xs);
+extern "C" SEXP _gmatlib_newton_basis_(SEXP x, SEXP xs) {
+  BEGIN_CPP11
+    return cpp11::as_sexp(newton_basis_(cpp11::as_cpp<cpp11::decay_t<double>>(x), cpp11::as_cpp<cpp11::decay_t<doubles>>(xs)));
+  END_CPP11
+}
 
 extern "C" {
 static const R_CallMethodDef CallEntries[] = {
-    {"_gmatlib_linfit_", (DL_FUNC) &_gmatlib_linfit_, 2},
+    {"_gmatlib_div_dif_",      (DL_FUNC) &_gmatlib_div_dif_,      2},
+    {"_gmatlib_linfit_",       (DL_FUNC) &_gmatlib_linfit_,       2},
+    {"_gmatlib_newton_basis_", (DL_FUNC) &_gmatlib_newton_basis_, 2},
     {NULL, NULL, 0}
 };
 }

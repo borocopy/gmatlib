@@ -4,9 +4,17 @@
 \name{gmatlib-package}
 \alias{gmatlib}
 \alias{gmatlib-package}
-\title{gmatlib: A general library for numerical analysis and computations.}
+\title{gmatlib: A general library for numerical analysis and computations}
 \description{
 Provides general tools to find numerical solutions to problems of numerical integration, interpolation and regression.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/borocopy/gmatlib}
+  \item Report bugs at \url{https://github.com/borocopy/gmatlib/issues}
+}
+
 }
 \author{
 \strong{Maintainer}: Denis Borodin \email{borocopy@gmail.com}

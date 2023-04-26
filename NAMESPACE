@@ -2,6 +2,7 @@
 
 export(integrate_rect)
 export(integrate_simpson)
+export(interp_newton)
 export(linfit)
 importFrom(magrittr,"%>%")
 useDynLib(gmatlib, .registration = TRUE)

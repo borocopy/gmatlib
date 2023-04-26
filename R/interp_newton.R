@@ -8,10 +8,11 @@
 #' @returns A function p(x) that calculates a value of the Newton polynomial
 #' for given points at x.
 #'
+#' @export
+#'
 #' @examples
 #' xs <- as.double(1:5)
 #' p <- interp_newton(xs, sin(xs))
-#'
 interp_newton <- function(xs, ys) {
   if (length(xs) == 0) {
     stop(simpleError("xs cannot be of length 0"))

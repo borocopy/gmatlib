@@ -21,5 +21,4 @@ Interpolate given points with a Newton polynomial.
 \examples{
 xs <- as.double(1:5)
 p <- interp_newton(xs, sin(xs))
-
 }

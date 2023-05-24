@@ -26,12 +26,28 @@ extern "C" SEXP _gmatlib_newton_basis_(SEXP x, SEXP xs) {
     return cpp11::as_sexp(newton_basis_(cpp11::as_cpp<cpp11::decay_t<double>>(x), cpp11::as_cpp<cpp11::decay_t<doubles>>(xs)));
   END_CPP11
 }
+// code.cpp
+double alter_johnson_(doubles ys, int t);
+extern "C" SEXP _gmatlib_alter_johnson_(SEXP ys, SEXP t) {
+  BEGIN_CPP11
+    return cpp11::as_sexp(alter_johnson_(cpp11::as_cpp<cpp11::decay_t<doubles>>(ys), cpp11::as_cpp<cpp11::decay_t<int>>(t)));
+  END_CPP11
+}
+// code.cpp
+doubles find_periods_(doubles xs, doubles ys, double tol);
+extern "C" SEXP _gmatlib_find_periods_(SEXP xs, SEXP ys, SEXP tol) {
+  BEGIN_CPP11
+    return cpp11::as_sexp(find_periods_(cpp11::as_cpp<cpp11::decay_t<doubles>>(xs), cpp11::as_cpp<cpp11::decay_t<doubles>>(ys), cpp11::as_cpp<cpp11::decay_t<double>>(tol)));
+  END_CPP11
+}
 
 extern "C" {
 static const R_CallMethodDef CallEntries[] = {
-    {"_gmatlib_div_dif_",      (DL_FUNC) &_gmatlib_div_dif_,      2},
-    {"_gmatlib_linfit_",       (DL_FUNC) &_gmatlib_linfit_,       2},
-    {"_gmatlib_newton_basis_", (DL_FUNC) &_gmatlib_newton_basis_, 2},
+    {"_gmatlib_alter_johnson_", (DL_FUNC) &_gmatlib_alter_johnson_, 2},
+    {"_gmatlib_div_dif_",       (DL_FUNC) &_gmatlib_div_dif_,       2},
+    {"_gmatlib_find_periods_",  (DL_FUNC) &_gmatlib_find_periods_,  3},
+    {"_gmatlib_linfit_",        (DL_FUNC) &_gmatlib_linfit_,        2},
+    {"_gmatlib_newton_basis_",  (DL_FUNC) &_gmatlib_newton_basis_,  2},
     {NULL, NULL, 0}
 };
 }

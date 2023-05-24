@@ -11,3 +11,11 @@ div_dif_ <- function(xs, ys) {
 newton_basis_ <- function(x, xs) {
   .Call(`_gmatlib_newton_basis_`, x, xs)
 }
+
+alter_johnson_ <- function(ys, t) {
+  .Call(`_gmatlib_alter_johnson_`, ys, t)
+}
+
+find_periods_ <- function(xs, ys, tol) {
+  .Call(`_gmatlib_find_periods_`, xs, ys, tol)
+}

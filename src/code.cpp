@@ -1,5 +1,6 @@
 #include <cpp11.hpp>
 #include <stdint.h>
+#include <vector>
 
 using namespace cpp11;
 namespace writable = cpp11::writable;
@@ -56,4 +57,28 @@ newton_basis_(double x, doubles xs) {
   }
 
   return basis;
+}
+
+[[cpp11::register]] double
+alter_johnson_(doubles ys, int t) {
+  std::size_t N = ys.size();
+  double sum = 0;
+  for (std::size_t i = 0; i < N - t; i++) {
+    sum += abs(ys[i + t] - ys[i]);
+  }
+
+  return sum / (N - t);
+}
+
+[[cpp11::register]] doubles
+find_periods_(doubles xs, doubles ys, double tol) {
+  std::vector<double> periods = {};
+  for (std::size_t i = 1; i < xs.size(); i++) {
+    double aj = alter_johnson_(ys, i);
+    if (abs(aj) < tol) {
+      periods.push_back(abs(xs[0] - xs[i]));
+    }
+  }
+
+  return writable::doubles(periods);
 }
